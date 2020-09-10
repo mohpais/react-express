@@ -1,0 +1,43 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    .sidebar-sticky {
+        position: relative;
+        top: 0;
+        height: calc(100vh - 48px);
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    }
+    .nav-item {
+        cursor: pointer;
+    }
+    .nav-item:hover {
+        color: #007bff;
+        .nav-link {
+            color: #007bff;
+        }
+    }
+}
+
+// .feather {
+//     width: 16px;
+//     height: 16px;
+//     vertical-align: text-bottom;
+// }
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+    }
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+  

@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import {Admin, User} from '../Authorization'
+import {Admin} from '../Authorization'
 
 // Error page
 import PageNotFound from '../PageNotFound'
@@ -12,7 +12,7 @@ import {Login, Register} from '../../auths'
 import { Home, Main, About } from '../../app/pages'
 
 // Admin Page
-import {MainAdm, Dasboard, List} from '../../adm/pages'
+import {MainAdm, Dasboard, ListBlog, ListMember} from '../../adm/pages'
 // // import {Create, Update, View, List} from '../Blog'
 
 // Layout Main Page
@@ -39,14 +39,15 @@ const Routes = () => {
                 {/* Route Admin */}
                 {/* <Route component={Admin(MainAdm)} exact /> */}
                 <AppRoute path="/adm-panel" layout={MainAdm} component={Admin(Dasboard)} exact />
-                <AppRoute path="/adm-panel/blog" layout={MainAdm} component={Admin(List)}  />
+                <AppRoute path="/adm-panel/blog" layout={MainAdm} component={Admin(ListBlog)}  />
+                <AppRoute path="/adm-panel/Member" layout={MainAdm} component={Admin(ListMember)}  />
 
                 {/* Route Auth */}
                 <Route path="/sign-up" component={Register} />
                 <Route path="/sign-in" component={Login} />
 
                 {/* Other Route */}
-                <Route component={PageNotFound} />
+                <Route path="/404" component={PageNotFound} />
             </Switch>
         </Router>
     )

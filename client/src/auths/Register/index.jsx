@@ -8,11 +8,13 @@ class Register extends Component {
         super(props)
         this.state = {}
     }
+
     onChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
     }
+    
     onSubmit = () => {
         console.log(this.state);
     }

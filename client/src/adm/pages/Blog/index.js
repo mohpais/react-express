@@ -1,11 +1,11 @@
-import Create from './Create'
-import Update from './Update'
-import View from './View'
-import List from './List'
+import CreateBlog from './Create'
+import UpdateBlog from './Update'
+import ViewBlog from './View'
+import ListBlog from './List'
 
 export {
-    Create,
-    Update,
-    View,
-    List
+    CreateBlog,
+    UpdateBlog,
+    ViewBlog,
+    ListBlog
 }

@@ -3,7 +3,7 @@ import './sidebar.scss'
 import { useHistory } from 'react-router-dom'
 // get our fontawesome imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBook, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faBook, faSignOutAlt, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Siderbar = () => {
     const history = useHistory()
@@ -28,6 +28,16 @@ const Siderbar = () => {
                             </div>
                             <div className="col-auto my-auto pl-0">
                                 <span>Blog</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item py-2" onClick={()=> {history.push('/adm-panel/member')}}>
+                        <div className="row" style={{fontWeight: '600'}}>
+                            <div className="col-auto">
+                                <FontAwesomeIcon className="feather" icon={faUser} />
+                            </div>
+                            <div className="col-auto my-auto pl-0">
+                                <span>Member</span>
                             </div>
                         </div>
                     </li>

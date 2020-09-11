@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, { Component } from  'react'
+import { Redirect } from 'react-router-dom';
 
 const GetUser = () => {
     // const fromStorage = JSON.parse(localStorage.getItem('user'));
@@ -19,12 +20,11 @@ const Authorization = allowedRoles => WrappedComponent => class withAuth extends
             user: GetUser()
         }
     }
-
     render() {
         const {role} = this.state.user
         return isValidRole({role: role, allowedRoles: allowedRoles}) ?
-        <WrappedComponent /> :
-        <h1>Anda tidak memiliki akses</h1>
+        <WrappedComponent /> : <Redirect to='/404' />
+        // <h1>Anda tidak memiliki akses</h1>
     }
 }
 

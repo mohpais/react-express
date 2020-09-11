@@ -5,7 +5,7 @@ import './footer.scss'
 const Icon = ({img, alt}) => {
     return (
         <div className="icon-wrapper">
-            <img className="icon-medsos" src={img} alt={alt} srcset=""/>
+            <img className="icon-medsos" src={img} alt={alt} />
         </div>
     )
 }

@@ -6,7 +6,7 @@ const GetUser = () => {
     // return fromStorage ? fromStorage : {user: '', role: 'user'}
     const auth = {
         user: '',
-        role: 'admin'
+        role: 'user'
     }
     return auth
 }
